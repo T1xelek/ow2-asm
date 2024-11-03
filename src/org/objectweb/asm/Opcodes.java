@@ -61,52 +61,52 @@ public interface Opcodes {
 
     // access flags
 
-    int ACC_PUBLIC = 0x0001; // class, field, method
-    int ACC_PRIVATE = 0x0002; // class, field, method
-    int ACC_PROTECTED = 0x0004; // class, field, method
-    int ACC_STATIC = 0x0008; // field, method
-    int ACC_FINAL = 0x0010; // class, field, method, parameter
-    int ACC_SUPER = 0x0020; // class
-    int ACC_SYNCHRONIZED = 0x0020; // method
-    int ACC_VOLATILE = 0x0040; // field
-    int ACC_BRIDGE = 0x0040; // method
-    int ACC_VARARGS = 0x0080; // method
-    int ACC_TRANSIENT = 0x0080; // field
-    int ACC_NATIVE = 0x0100; // method
-    int ACC_INTERFACE = 0x0200; // class
-    int ACC_ABSTRACT = 0x0400; // class, method
-    int ACC_STRICT = 0x0800; // method
-    int ACC_SYNTHETIC = 0x1000; // class, field, method, parameter
-    int ACC_ANNOTATION = 0x2000; // class
-    int ACC_ENUM = 0x4000; // class(?) field inner
-    int ACC_MANDATED = 0x8000; // parameter
+    int PUBLIC = 0x0001; // class, field, method
+    int PRIVATE = 0x0002; // class, field, method
+    int PROTECTED = 0x0004; // class, field, method
+    int STATIC = 0x0008; // field, method
+    int FINAL = 0x0010; // class, field, method, parameter
+    int EXTENDS = 0x0020; // class
+    int SYNCHRONIZED = 0x0020; // method
+    int VOLATILE = 0x0040; // field
+    int BRIDGE = 0x0040; // method
+    int MANYARGS = 0x0080; // method | example — (Object... objects)
+    int TRANSIENT = 0x0080; // field
+    int NATIVE = 0x0100; // method
+    int INTERFACE = 0x0200; // class
+    int ABSTRACT = 0x0400; // class, method
+    int STRICT = 0x0800; // method
+    int SYNTHETIC = 0x1000; // class, field, method, parameter
+    int ANNOTATION = 0x2000; // class
+    int ENUM = 0x4000; // class(?) field inner
+    int MANDATED = 0x8000; // parameter
 
     // ASM specific pseudo access flags
 
-    int ACC_DEPRECATED = 0x20000; // class, field, method
+    int DEPRECATED = 0x20000; // class, field, method
 
     // types for NEWARRAY
-
-    int T_BOOLEAN = 4;
-    int T_CHAR = 5;
-    int T_FLOAT = 6;
-    int T_DOUBLE = 7;
-    int T_BYTE = 8;
-    int T_SHORT = 9;
-    int T_INT = 10;
-    int T_LONG = 11;
+    
+    int ARRAY_BOOLEAN = 4;
+    int ARRAY_CHAR = 5;
+    int ARRAY_FLOAT = 6;
+    int ARRAY_DOUBLE = 7;
+    int ARRAY_BYTE = 8;
+    int ARRAY_SHORT = 9;
+    int ARRAY_INT = 10;
+    int ARRAY_LONG = 11;
 
     // tags for Handle
 
-    int H_GETFIELD = 1;
-    int H_GETSTATIC = 2;
-    int H_PUTFIELD = 3;
-    int H_PUTSTATIC = 4;
-    int H_INVOKEVIRTUAL = 5;
-    int H_INVOKESTATIC = 6;
-    int H_INVOKESPECIAL = 7;
-    int H_NEWINVOKESPECIAL = 8;
-    int H_INVOKEINTERFACE = 9;
+    int HANDLE_GETFIELD = 1;
+    int HANDLE_GETSTATIC = 2;
+    int HANDLE_PUTFIELD = 3;
+    int HANDLE_PUTSTATIC = 4;
+    int HANDLE_INVOKEVIRTUAL = 5;
+    int HANDLE_INVOKESTATIC = 6;
+    int HANDLE_INVOKESPECIAL = 7;
+    int HANDLE_NEWINVOKESPECIAL = 8;
+    int HANDLE_INVOKEINTERFACE = 9;
 
     // stack map frame types
 
@@ -159,12 +159,12 @@ public interface Opcodes {
     int NOP = 0; // visitInsn
     int ACONST_NULL = 1; // -
     int ICONST_M1 = 2; // -
-    int ICONST_0 = 3; // -
-    int ICONST_1 = 4; // -
-    int ICONST_2 = 5; // -
-    int ICONST_3 = 6; // -
-    int ICONST_4 = 7; // -
-    int ICONST_5 = 8; // -
+    int NUM_0 = 3; // -
+    int NUM_1 = 4; // -
+    int NUM_2 = 5; // -
+    int NUM_3 = 6; // -
+    int NUM_4 = 7; // -
+    int NUM_5 = 8; // -
     int LCONST_0 = 9; // -
     int LCONST_1 = 10; // -
     int FCONST_0 = 11; // -
